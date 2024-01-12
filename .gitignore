@@ -1,0 +1,16 @@
+*~
+*#*
+.DS*
+*.cm
+*.class
+*.pyc
+*.pyd
+*.egg-info/
+*.so
+*.egg*
+.tox
+.idea/
+.vscode/
+.nova/
+.venv/
+env.sh

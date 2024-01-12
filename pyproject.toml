@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=62"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oidc-test-app"
+version = "0.1"
+description = 'Test App for OIDC in PyMongo'
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+keywords = []
+authors = [
+  { name = "Steven Silvester", email = "steven.silvester@ieee.org" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/blink1073/oidc-test-app#readme"
+Issues = "https://github.com/blink1073/oidc-test-app/issues"
+Source = "https://github.com/blink1073/oidc-test-app"
