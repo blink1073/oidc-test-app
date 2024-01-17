@@ -5,9 +5,11 @@
 - Azure Managed Identity with associated Group
 - Azure VM with associated Managed Identity
 - MongoDB Cluster configured with OIDC
-- Local version of Python 3.8+.
+- Local version of Python 3.8+ and Git.
 
 ## Setup
+
+Clone this repository onto your VM.
 
 Run `bash bootstrap.sh` to create a virtual environment with
 an OIDC-enabled version of PyMongo.
