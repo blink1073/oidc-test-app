@@ -12,7 +12,7 @@
 Run `bash bootstrap.sh` to create a virtual environment with
 an OIDC-enabled version of PyMongo.
 
-Edit `test.py` as desired to excercise test.
+Edit `test_provider.py` and `test_custom_callback.py` as desired to excercise test.
 
 Create an `env.sh` file with the appropriate variables:
 
@@ -25,3 +25,5 @@ export AZURE_IDENTITY_OBJECT_ID="<object_id_of_azure_application>"
 ## Usage
 
 Run `run.sh` to run the test script in the virtual environment.
+By default it will run `test_provider.py`.  To test the custom callback
+run ad `run.sh test_custom_callback.py`.

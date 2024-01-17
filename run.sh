@@ -15,6 +15,8 @@ for VARNAME in ${VARLIST[*]}; do
 [[ -z "${!VARNAME}" ]] && echo "ERROR: $VARNAME not set" && exit 1;
 done
 
-export MONGODB_URI="${MONGODB_URI}/?authMechanism=MONGODB-OIDC&authMechanismProperties=PROVIDER_NAME:azure,TOKEN_AUDIENCE:api%3A%2F%2F${AZURE_APP_CLIENT_ID}"
+TARGET=${1:-test_provider.py}
+
+export MONGODB_URI="${MONGODB_URI}/?authMechanism=MONGODB-OIDC"
 echo $MONGODB_URI
-.venv/bin/python3 test.py
+.venv/bin/python3 $TARGET
