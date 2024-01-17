@@ -40,7 +40,7 @@ class MyCallback(OIDCCallback):
                 raise ValueError(msg)
         return dict(access_token=data['access_token'])
 
-props = dict(callback=MyCallback())
+props = dict(callback=MyCallback(), callback_type="machine")
 c = MongoClient('mongodb://localhost:27017/?authMechanism=MONGODB-OIDC', authMechanismProperties=props)
 c.test.test.insert_one({})
 c.close()
