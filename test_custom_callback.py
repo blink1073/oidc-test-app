@@ -38,7 +38,7 @@ class MyCallback(OIDCCallback):
                 msg = "Azure IMDS response must contain %s, but was %s."
                 msg = msg % (key, body)
                 raise ValueError(msg)
-        return dict(access_token=data['access_token'])
+        return OIDCCallbackResult(access_token=data['access_token'])
 
 props = dict(callback=MyCallback(), CALLBACK_TYPE="machine")
 c = MongoClient('mongodb://localhost:27017/?authMechanism=MONGODB-OIDC', authMechanismProperties=props)
