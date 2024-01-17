@@ -15,6 +15,7 @@ class MyCallback(OIDCCallback):
         url += f"&resource=api://{app_id}"
         url += f"&object_id={object_id}"
         headers = { "Metadata": "true", "Accept": "application/json" }
+        print('Fetching url', url)
         request = Request(url, headers=headers)
         try:
             with urlopen(request, timeout=context.timeout_seconds) as response:
