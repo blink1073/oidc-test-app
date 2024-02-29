@@ -17,6 +17,6 @@ done
 TARGET=${1:-test_provider.py}
 
 MONGODB_URI="${MONGODB_URI:-mongodb://localhost:27017/}"
-export MONGODB_URI="${MONGODB_URI}/?authMechanism=MONGODB-OIDC"
+export MONGODB_URI="${MONGODB_URI}?authMechanism=MONGODB-OIDC"
 echo $MONGODB_URI
 .venv/bin/python3 $TARGET
