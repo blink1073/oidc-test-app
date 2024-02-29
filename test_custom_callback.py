@@ -6,7 +6,7 @@ from pymongo.auth_oidc import OIDCCallback, OIDCCallbackContext, OIDCCallbackRes
 
 app_id = os.environ['AZURE_APP_CLIENT_ID']
 object_id = os.environ['AZURE_IDENTITY_OBJECT_ID']
-uri = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/?authMechanism=MONGODB-OIDC')
+uri = os.environ['MONGODB_URI']
 
 class MyCallback(OIDCCallback):
     def fetch(self, context: OIDCCallbackContext) -> OIDCCallbackResult:
