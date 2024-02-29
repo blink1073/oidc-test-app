@@ -6,7 +6,7 @@ from pymongo.auth_oidc import OIDCCallback, OIDCCallbackContext, OIDCCallbackRes
 
 app_id = os.environ['AZURE_APP_CLIENT_ID']
 object_id = os.environ['AZURE_IDENTITY_OBJECT_ID']
-
+uri = os.environ['MONGODB_URI']
 
 class MyCallback(OIDCCallback):
     def fetch(self, context: OIDCCallbackContext) -> OIDCCallbackResult:
@@ -41,7 +41,7 @@ class MyCallback(OIDCCallback):
                 raise ValueError(msg)
         return OIDCCallbackResult(access_token=data['access_token'])
 
-props = dict(callback=MyCallback(), CALLBACK_TYPE="machine")
-c = MongoClient('mongodb://localhost:27017/?authMechanism=MONGODB-OIDC', authMechanismProperties=props)
+props = dict(OIDC_CALLBACK=MyCallback())
+c = MongoClient(uri, authMechanismProperties=props)
 c.test.test.insert_one({})
 c.close()

@@ -23,3 +23,6 @@ dependencies = []
 Documentation = "https://github.com/blink1073/oidc-test-app#readme"
 Issues = "https://github.com/blink1073/oidc-test-app/issues"
 Source = "https://github.com/blink1073/oidc-test-app"
+
+[tool.setuptools]
+packages = []

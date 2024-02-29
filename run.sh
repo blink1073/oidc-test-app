@@ -5,7 +5,6 @@ source ./env.sh
 
 VARLIST=(
 AZURE_IDENTITY_OBJECT_ID
-MONGODB_URI
 AZURE_APP_CLIENT_ID
 )
 
@@ -17,6 +16,7 @@ done
 
 TARGET=${1:-test_provider.py}
 
-export MONGODB_URI="${MONGODB_URI}/?authMechanism=MONGODB-OIDC"
+MONGODB_URI="${MONGODB_URI:-mongodb://localhost:27017/}"
+export MONGODB_URI="${MONGODB_URI}?authMechanism=MONGODB-OIDC"
 echo $MONGODB_URI
 .venv/bin/python3 $TARGET

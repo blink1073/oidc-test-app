@@ -19,7 +19,7 @@ Edit `test_provider.py` and `test_custom_callback.py` as desired to excercise te
 Create an `env.sh` file with the appropriate variables:
 
 ```bash
-export MONGODB_URI="<uri_of_cluster>"
+export MONGODB_URI="<uri_of_cluster>"  # defaults to mongodb://localhost:27017/
 export AZURE_APP_CLIENT_ID="<client_id_of_azure_application>"
 export AZURE_IDENTITY_OBJECT_ID="<object_id_of_azure_application>"
 ```
