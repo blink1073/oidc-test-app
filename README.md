@@ -28,7 +28,7 @@ export AZURE_IDENTITY_OBJECT_ID="<object_id_of_azure_application>"
 
 Run `run.sh` to run the test script in the virtual environment.
 By default it will run `test_provider.py`.  To test the custom callback
-run ad `run.sh test_custom_callback.py`.
+run as `run.sh test_custom_callback.py`.
 
 
 ## References

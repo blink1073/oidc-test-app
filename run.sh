@@ -4,7 +4,7 @@ set -o errexit  # Exit the script with error if any of the commands fail
 source ./env.sh
 
 VARLIST=(
-AZURE_IDENTITY_OBJECT_ID
+AZURE_IDENTITY_CLIENT_ID
 AZURE_APP_CLIENT_ID
 )
 
